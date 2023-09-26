@@ -1,0 +1,9 @@
+Local:
+GET http://localhost:7070/contact
+GET http://localhost:7070/contact/651328203858aec2592c25cc
+POST http://localhost:7070/contact
+PUT http://localhost:7070/contact/651328203858aec2592c25cc
+DELETE http://localhost:7070/contact/651328203858aec2592c25cc
+
+dashboardRender:
+https://contactsapi-i0n3.onrender.com/contact

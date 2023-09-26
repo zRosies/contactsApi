@@ -89,7 +89,7 @@ const deleteContact= async(req,res)=>{
 
     try{
         if (response.acknowledged) {
-            res.status(201).json(response);
+            res.status(200).json(response);
             console.log(id + ' item removed')
         } 
         else {
@@ -114,7 +114,7 @@ const updateContact= async (req,res)=>{
 
     try{
         if (response.acknowledged) {
-            res.status(201).json(response);
+            res.status(204).json(response);
             console.log(id+ 'item updated')
         } 
         else {
