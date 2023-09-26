@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Add a contact</a>
+            <a href="#">contacts</a>
+        </nav>
+    </header>
+    <main>
+        <form action="http://localhost:7070/contact" method="POST" enctype="application/json">
+            <!-- Input fields -->
+            <input type="text" name="firstName" required>
+            <input type="text" name="lastName" required>
+            <!-- Other input fields -->
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <script>
+       
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const formData = new FormData(contactForm);
+                const formDataObject = {};
+                
+                formData.forEach((value, key) => {
+                    formDataObject[key] = value;
+                });
+
+                console.log('Form Data:', formDataObject);
+            ;
+        });
+    </script>
+    
+</body>
+</html>
