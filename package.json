@@ -7,6 +7,9 @@
     "start": "nodemon server.js",
     "test": "test"
   },
+  "engines": {
+    "node": ">=18 <19"
+  },
   "repository": {
     "type": "git",
     "url": "na"
